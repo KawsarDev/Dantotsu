@@ -1955,6 +1955,7 @@ class ExoplayerView : AppCompatActivity(), Player.Listener, SessionAvailabilityL
                 )
             ) {
                 preloading = true
+                updateAniProgress()
                 nextEpisode(false) { i ->
                     val ep = episodes[episodeArr[currentEpisodeIndex + i]] ?: return@nextEpisode
                     val selected = media.selected ?: return@nextEpisode
